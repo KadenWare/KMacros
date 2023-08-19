@@ -7,3 +7,314 @@ OrionNotification:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local TBFrame1 = Instance.new("Frame")
+local TitleLabel = Instance.new("TextLabel")
+local Dropdown = Instance.new("ImageButton")
+local DropdownOptions = Instance.new("Frame")
+local UIListLayout = Instance.new("UIListLayout")
+local Home = Instance.new("ImageButton")
+local UIPadding = Instance.new("UIPadding")
+local WebH = Instance.new("ImageButton")
+local Macro = Instance.new("ImageButton")
+local Teleports = Instance.new("ImageButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TBFrame1.Name = "TBFrame1"
+TBFrame1.Parent = ScreenGui
+TBFrame1.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+TBFrame1.BackgroundTransparency = 0.100
+TBFrame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TBFrame1.BorderSizePixel = 0
+TBFrame1.Position = UDim2.new(0.217624515, 0, 0.19588685, 0)
+TBFrame1.Size = UDim2.new(0, 500, 0, 30)
+
+TitleLabel.Name = "TitleLabel"
+TitleLabel.Parent = TBFrame1
+TitleLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.BackgroundTransparency = 1.000
+TitleLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TitleLabel.BorderSizePixel = 0
+TitleLabel.Position = UDim2.new(0.273999989, 0, 0, 0)
+TitleLabel.Size = UDim2.new(0, 200, 0, 32)
+TitleLabel.Font = Enum.Font.Unknown
+TitleLabel.Text = "Kadan's Macros V.0.2"
+TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.TextScaled = true
+TitleLabel.TextSize = 14.000
+TitleLabel.TextWrapped = true
+
+Dropdown.Name = "Dropdown"
+Dropdown.Parent = TBFrame1
+Dropdown.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dropdown.BackgroundTransparency = 1.000
+Dropdown.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Dropdown.BorderSizePixel = 0
+Dropdown.Position = UDim2.new(0, 0, 0.100000001, 0)
+Dropdown.Size = UDim2.new(0, 30, 0, 25)
+Dropdown.Image = "rbxassetid://13359761033"
+
+DropdownOptions.Name = "DropdownOptions"
+DropdownOptions.Parent = TBFrame1
+DropdownOptions.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+DropdownOptions.BackgroundTransparency = 0.100
+DropdownOptions.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DropdownOptions.BorderSizePixel = 0
+DropdownOptions.Position = UDim2.new(0, 0, 1.05333352, 0)
+DropdownOptions.Size = UDim2.new(0, 500, 0, 30)
+
+UIListLayout.Parent = DropdownOptions
+UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 10)
+
+Home.Name = "Home"
+Home.Parent = DropdownOptions
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Home.BorderSizePixel = 0
+Home.Position = UDim2.new(0, 0, 0.0666666701, 0)
+Home.Size = UDim2.new(0, 25, 0, 25)
+Home.Image = "rbxassetid://13300916613"
+Home.ImageColor3 = Color3.fromRGB(204, 204, 204)
+
+UIPadding.Parent = DropdownOptions
+UIPadding.PaddingBottom = UDim.new(0, 1)
+UIPadding.PaddingLeft = UDim.new(0, 1)
+UIPadding.PaddingRight = UDim.new(0, 1)
+UIPadding.PaddingTop = UDim.new(0, 1)
+
+WebH.Name = "WebH"
+WebH.Parent = DropdownOptions
+WebH.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WebH.BackgroundTransparency = 1.000
+WebH.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WebH.BorderSizePixel = 0
+WebH.Position = UDim2.new(0, 0, 0.0666666701, 0)
+WebH.Size = UDim2.new(0, 25, 0, 25)
+WebH.Image = "rbxassetid://14376301448"
+WebH.ImageColor3 = Color3.fromRGB(204, 204, 204)
+
+Macro.Name = "Macro"
+Macro.Parent = DropdownOptions
+Macro.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Macro.BackgroundTransparency = 1.000
+Macro.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Macro.BorderSizePixel = 0
+Macro.Position = UDim2.new(0, 0, 0.0666666701, 0)
+Macro.Size = UDim2.new(0, 25, 0, 25)
+Macro.Image = "rbxassetid://13300916613"
+Macro.ImageColor3 = Color3.fromRGB(204, 204, 204)
+
+Teleports.Name = "Teleports"
+Teleports.Parent = DropdownOptions
+Teleports.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Teleports.BackgroundTransparency = 1.000
+Teleports.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teleports.BorderSizePixel = 0
+Teleports.Position = UDim2.new(0, 0, 0.0666666701, 0)
+Teleports.Size = UDim2.new(0, 25, 0, 25)
+Teleports.Image = "rbxassetid://13300916613"
+Teleports.ImageColor3 = Color3.fromRGB(204, 204, 204)
+
+-- Scripts:
+
+local function UVKOTY_fake_script() -- Dropdown.ClickColor 
+	local script = Instance.new('LocalScript', Dropdown)
+
+	--[[
+	UNOPENED IMAGE; rbxassetid://13359761033
+	PRESSED IMAGE: rbxassetid://14167239770
+	]]
+	
+	local S = script
+	local DropdownBtn = S.Parent
+	local TargetButton = DropdownBtn
+	
+	--TargetButton.MouseButton1Click:Connect(function()
+	--	if DropdownBtn.ImageColor3 == Color3.fromRGB(255,255,255) then
+	--		DropdownBtn.ImageColor3 = Color3.fromRGB(139, 255, 139)
+	--	elseif DropdownBtn.ImageColor3 == Color3.fromRGB(139,255,139) then
+	--		DropdownBtn.ImageColor3 = Color3.fromRGB(255,255,255)
+	--	end
+	--end)
+	TargetButton.MouseButton1Click:Connect(function()
+		if DropdownBtn.Image == "rbxassetid://13359761033" then
+			DropdownBtn.Image = "rbxassetid://14167239770"
+	DropdownBtn.ImageColor3 = Color3.fromRGB(135, 255, 114)
+		elseif DropdownBtn.Image == "rbxassetid://14167239770" then
+			DropdownBtn.Image = "rbxassetid://13359761033"
+			DropdownBtn.ImageColor3 = Color3.fromRGB(255, 255, 255)
+		end
+	end)
+	
+end
+coroutine.wrap(UVKOTY_fake_script)()
+local function QQDAU_fake_script() -- Dropdown.LocalScript 
+	local script = Instance.new('LocalScript', Dropdown)
+
+	local S = script
+	local DropdownBtn = S.Parent
+	local TargetButton = DropdownBtn
+	local DropDownOptionsFrame = script.Parent.Parent.DropdownOptions
+	
+	TargetButton.MouseButton1Click:Connect(function()
+		if DropdownBtn.Image == "rbxassetid://13359761033" then
+			DropDownOptionsFrame.Visible = true
+		elseif DropdownBtn.Image == "rbxassetid://14167239770" then
+			DropDownOptionsFrame.Visible = false
+		end
+	end)
+	
+end
+coroutine.wrap(QQDAU_fake_script)()
+local function TQLHTUX_fake_script() -- Home.MouseHoverColor 
+	local script = Instance.new('LocalScript', Home)
+
+	local S = script
+	local HomeButton = S.Parent
+	local TargetButton = HomeButton
+	
+	TargetButton.MouseEnter:Connect(function()
+		HomeButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+	
+	TargetButton.MouseLeave:Connect(function()
+		HomeButton.ImageColor3 = Color3.fromRGB(204, 204, 204)
+	end)
+end
+coroutine.wrap(TQLHTUX_fake_script)()
+local function NRAXE_fake_script() -- WebH.MouseHoverColor 
+	local script = Instance.new('LocalScript', WebH)
+
+	local S = script
+	local WehookButton = S.Parent
+	local TargetButton = WehookButton
+	
+	TargetButton.MouseEnter:Connect(function()
+		WehookButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+	
+	TargetButton.MouseLeave:Connect(function()
+		WehookButton.ImageColor3 = Color3.fromRGB(204, 204, 204)
+	end)
+end
+coroutine.wrap(NRAXE_fake_script)()
+local function JAYTV_fake_script() -- Macro.MouseHoverColor 
+	local script = Instance.new('LocalScript', Macro)
+
+	local S = script
+	local HomeButton = S.Parent
+	local TargetButton = HomeButton
+	
+	TargetButton.MouseEnter:Connect(function()
+		HomeButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+	
+	TargetButton.MouseLeave:Connect(function()
+		HomeButton.ImageColor3 = Color3.fromRGB(204, 204, 204)
+	end)
+end
+coroutine.wrap(JAYTV_fake_script)()
+local function CSEZEP_fake_script() -- Teleports.MouseHoverColor 
+	local script = Instance.new('LocalScript', Teleports)
+
+	local S = script
+	local TeleportsButton = S.Parent
+	local TargetButton = TeleportsButton
+	
+	TargetButton.MouseEnter:Connect(function()
+		TeleportsButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
+	end)
+	
+	TargetButton.MouseLeave:Connect(function()
+		TeleportsButton.ImageColor3 = Color3.fromRGB(204, 204, 204)
+	end)
+end
+coroutine.wrap(CSEZEP_fake_script)()
+local function GEER_fake_script() -- TBFrame1.Dragify 
+	local script = Instance.new('LocalScript', TBFrame1)
+
+	----- MADE BY KADAN6407 ( [ this is my account for developing ] ) [NOTES]
+	----- Main `ROBLOX` Account: Killshot_storm (Author)
+	--- ENABLE FRAME DRAGGING  ̲ᴛ̲ɪ̲ᴛ̲ʟ̲ᴇ
+	-- Put in the frame of your choice  [' INSTRUCTIONS ']
+	---- ONLY EDIT IF YOU KNOW HOW TO | ONE MISTAKE AND IT WONT WORK UNLESS ITS FIXED! [' Information ']
+	local UIS = game:GetService("UserInputService")
+	function EnableFrameDrag(Frame)
+	    dragToggle = nil
+	    local dragSpeed = 1.25
+	    dragInput = nil
+	    dragStart = nil
+	    local dragPos = nil
+	    function updateInput(input)
+	        local Delta = input.Position - dragStart
+	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
+	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0.30), {Position = Position}):Play()
+	    end
+	    Frame.InputBegan:Connect(function(input)
+	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
+	            dragToggle = true
+	            dragStart = input.Position
+	            startPos = Frame.Position
+	            input.Changed:Connect(function()
+	                if input.UserInputState == Enum.UserInputState.End then
+	                    dragToggle = false
+	                end
+	            end)
+	        end
+	    end)
+	    Frame.InputChanged:Connect(function(input)
+	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+	            dragInput = input
+	        end
+	    end)
+	    game:GetService("UserInputService").InputChanged:Connect(function(input)
+	        if input == dragInput and dragToggle then
+	            updateInput(input)
+	        end
+	    end)
+	end
+	local ThisScript = script
+	local Mainframe = ThisScript.Parent
+	
+	EnableFrameDrag(Mainframe)
+end
+coroutine.wrap(GEER_fake_script)()
+local function WGEHVGF_fake_script() -- TBFrame1.LocalScript 
+	local script = Instance.new('LocalScript', TBFrame1)
+
+	
+end
+coroutine.wrap(WGEHVGF_fake_script)()
+local function VUWYEB_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local GameSpaces = {
+		GameSpaces_SoundService = game.SoundService
+	}
+	
+	local NewInsts = {
+		New_Sound = Instance.new("Sound")
+	}
+	
+	local LoadedSound = NewInsts.New_Sound
+	LoadedSound.Volume = 1
+	LoadedSound.Parent = GameSpaces.GameSpaces_SoundService
+	LoadedSound.SoundId = "rbxassetid://1584394759"
+	LoadedSound.Name = "EEewaqewq1324e212"
+	LoadedSound:Play()
+end
+coroutine.wrap(VUWYEB_fake_script)()

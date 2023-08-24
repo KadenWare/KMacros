@@ -1,6 +1,5 @@
 # KadansMacros
 BSS Macro Script
-Here is an updated list of the colors that are currently implemented with a name
 
 | KMacro              | Estimated | Users     |
 |---------------------|:---------:|:---------:|

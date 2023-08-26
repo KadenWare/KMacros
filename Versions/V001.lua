@@ -13,22 +13,22 @@ ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
-Frame.BackgroundColor3 = Color3.fromRGB(190, 255, 170)
+Frame.BackgroundColor3 = Color3.fromRGB(62, 62, 62)
 Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame.BorderSizePixel = 0
-Frame.Position = UDim2.new(0.335361212, 0, 0.18588236, 0)
-Frame.Size = UDim2.new(0, 250, 0, 30)
+Frame.Position = UDim2.new(0.195437267, 0, 0.224705875, 0)
+Frame.Size = UDim2.new(0, 800, 0, 30)
 
 Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame_2.BackgroundColor3 = Color3.fromRGB(46, 46, 46)
 Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Frame_2.BorderSizePixel = 0
-Frame_2.Position = UDim2.new(-6.07910151e-05, 0, 0.991695583, 0)
-Frame_2.Size = UDim2.new(0, 250, 0, 500)
+Frame_2.Position = UDim2.new(0, 0, 1, 0)
+Frame_2.Size = UDim2.new(0, 800, 0, 500)
 
 -- Scripts:
 
-local function IHXO_fake_script() -- Frame.1.50 Frame Dragging | Not Exact 
+local function ERMB_fake_script() -- Frame.1.50 Frame Dragging | Not Exact 
 	local script = Instance.new('LocalScript', Frame)
 
 	--[[
@@ -78,8 +78,8 @@ local function IHXO_fake_script() -- Frame.1.50 Frame Dragging | Not Exact
 	local FD_Target = script.Parent
 	EFD(FD_Target)
 end
-coroutine.wrap(IHXO_fake_script)()
-local function XBFOV_fake_script() -- Frame.GuiMouse 
+coroutine.wrap(ERMB_fake_script)()
+local function QLMMP_fake_script() -- Frame.GuiMouse 
 	local script = Instance.new('LocalScript', Frame)
 
 	--[[
@@ -93,7 +93,7 @@ local function XBFOV_fake_script() -- Frame.GuiMouse
 	local Mouse = LP:GetMouse()
 	
 	TargetFrame.MouseEnter:Connect(function()
-		Mouse.Icon = "rbxassetid://636810791" 
+		Mouse.Icon = "rbxassetid://7939706315" 
 	end)
 	
 	TargetFrame.MouseLeave:Connect(function()
@@ -102,4 +102,4 @@ local function XBFOV_fake_script() -- Frame.GuiMouse
 	
 	
 end
-coroutine.wrap(XBFOV_fake_script)()
+coroutine.wrap(QLMMP_fake_script)()

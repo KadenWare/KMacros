@@ -1,8 +1,9 @@
--- Gui to Lua
--- Version: 3.2
-
+--[[
+ - - - - KMacros - - - -
+ - - - Version 001 - - -
+   - - Code: LUAU - -
+]]
 -- Instances:
-
 local OptionalColorThemetest = Instance.new("Folder")
 local MainIntro = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
